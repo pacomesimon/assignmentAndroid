@@ -4,96 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second Activity: Employees and Actors"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/tableRow2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false">
-
-
-            <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="38dp"
-                android:layout_height="30dp"
-                android:backgroundTint="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_chainStyle="spread_inside"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="?attr/actionModeCloseDrawable" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Schedules"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton5"
-                app:layout_constraintStart_toEndOf="@+id/imageButton4"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="4dp"
-                android:backgroundTint="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.285"
-                app:srcCompat="@android:drawable/btn_dropdown" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/tableRow3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayout"
-                android:layout_width="442dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium">
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MOVIES" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="CINEMAS" />
-
-            </com.google.android.material.tabs.TabLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </TableLayout>
+    <Button
+        android:id="@+id/open_main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4">
+        app:layout_constraintTop_toBottomOf="@+id/open_main_button">
 
         <TableRow
             android:layout_width="match_parent"
@@ -130,7 +70,7 @@
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Angry Indian Goddesses (Hind... (A)"
+                                android:text="John Big"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -141,7 +81,6 @@
                                 android:id="@+id/imageButton6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -173,7 +112,7 @@
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Creed (English) (A)"
+                                android:text="Josh Man"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toStartOf="@+id/imageButton6"
@@ -186,7 +125,6 @@
                                 android:id="@+id/imageButton6_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -218,7 +156,7 @@
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Hate Story 3 (Hindi) (A)"
+                                android:text="Heat Boy"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toStartOf="@+id/imageButton6"
@@ -231,7 +169,6 @@
                                 android:id="@+id/imageButton6_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -263,7 +200,7 @@
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="In the Heart of the Sea (Eng .. (U/A)"
+                                android:text="Bad Stone"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toStartOf="@+id/imageButton6"
@@ -276,7 +213,6 @@
                                 android:id="@+id/imageButton6_3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -308,7 +244,7 @@
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Kytay kaljat Ghusli (Marath .. (U)"
+                                android:text="Jan Feb"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toStartOf="@+id/imageButton6"
@@ -321,7 +257,6 @@
                                 android:id="@+id/imageButton6_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -353,7 +288,7 @@
                                 android:id="@+id/textVie"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Kumari 21F (Telugu) (A)"
+                                android:text="Kim Chang"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toStartOf="@+id/imageButton6"
@@ -366,7 +301,6 @@
                                 android:id="@+id/imageButton6_5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -398,7 +332,7 @@
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Prem Ratan Dhan Payo (Hindi) (U)"
+                                android:text="Suzuki Boss"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toStartOf="@+id/imageButton6"
@@ -411,7 +345,6 @@
                                 android:id="@+id/imageButton6_6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -443,7 +376,7 @@
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Goddesses (Hind... (B)"
+                                android:text="Cold Soup"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toStartOf="@+id/imageButton6"
@@ -456,7 +389,6 @@
                                 android:id="@+id/imageButton6_7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -488,7 +420,7 @@
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Indian Goddesses (Hind... (C)"
+                                android:text="New Kid"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toStartOf="@+id/imageButton6"
@@ -501,7 +433,6 @@
                                 android:id="@+id/imageButton6_8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -533,7 +464,7 @@
                                 android:id="@+id/textView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Angry Goddesses (Hind... (A)"
+                                android:text="Mama Diode"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toStartOf="@+id/imageButton6"
@@ -546,7 +477,6 @@
                                 android:id="@+id/imageButton6_9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -561,68 +491,4 @@
 
         </TableRow>
     </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#656464" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="74dp"
-                android:layout_height="wrap_content"
-                android:text="  Lapsed"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="#656464" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#E31919" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="74dp"
-                android:layout_height="wrap_content"
-                android:text="  Sold Out"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="#E31919" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#0E31EF" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="74dp"
-                android:layout_height="wrap_content"
-                android:text="  Available"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="#0E31EF" />
-
-        </TableRow>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="95dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
